@@ -1,0 +1,6 @@
+# compilation files
+*.out
+*.obj
+
+# gdb scripts
+*.b
