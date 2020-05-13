@@ -1,0 +1,16 @@
+\documentclass{beamer}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+
+\title{test}
+\author{Sun}
+
+\begin{document}
+
+\begin{frame}
+hello
+  \titlepage
+\end{frame}
+
+\end{document}

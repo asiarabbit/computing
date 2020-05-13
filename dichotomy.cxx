@@ -1,4 +1,9 @@
-// solving roots of a function by dichotomy
+/**
+  \brief solving roots of a function by dichotomy
+  \author SUN Yazhou, asia.rabbit@163.com
+  \date Created: 2020/05/04 Last revised: 2020/05/04 by SUN Yazhou
+  \copyright 2020, SUN Yazhou
+*/
 
 #include <cstdlib>
 #include <iostream>
