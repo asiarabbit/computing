@@ -16,9 +16,6 @@ void ShowMatrix(double *A, const int nrow, const int ncol);
 int main(){
   const int n = 3; // the dimension of the coefficient matrix
   double Ab[3][4] = {
-    // {0., 1., 1., 1.},
-    // {1., 2., 3., 0.},
-    // {1., 4., 6., 2.}
     { 12., -3.,  3.,  15.},
     {-18.,  3., -1., -15.},
     {  1.,  1.,  1.,   6.}
