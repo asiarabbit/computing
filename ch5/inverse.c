@@ -16,7 +16,7 @@ void ShowMatrix(double *A, const int nrow, const int ncol);
 int main(){
   const int n = 4, n2 = 2*n; // the dimension of the coefficient matrix
   double AE[4][8] = { // the augmented matrix (A|b), b[j] = A[n+1][j]
-    {3.,  2.,  0., -1., 1, 0, 0, 0},
+    {3., -2.,  0., -1., 1, 0, 0, 0},
     {0.,  2.,  2.,  1., 0, 1, 0, 0},
     {1., -2.,  3., -2., 0, 0, 1, 0},
     {0.,  1.,  2.,  1., 0, 0, 0, 1}
