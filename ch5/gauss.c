@@ -16,12 +16,12 @@ void ShowMatrix(double *A, const int nrow, const int ncol);
 int main(){
   const int n = 3; // the dimension of the coefficient matrix
   double A[3][3] = {
-    { 2.,  1.,  1.},
-    { 1.,  3.,  2.},
-    { 1.,  2.,  2.}
+    { 1.,  1.,  1.},
+    { 1.,  3., -2.},
+    { 2., -2.,  1.}
   };
   double b[3] = { // the constant vector
-    4., 6., 5.
+    6., 1., 1.
   };
 
   // the elimination routine //
@@ -40,7 +40,6 @@ int main(){
 
   // solving {x_k} by backward substitution //
   // the result would be stored inplace in vector b
-  b[n] /= A[n][n];
   for(int i = n - 1; i >= 0; i--){ // loop over x_i
     // calculate sum(A[i][j]*x[j]) (j = i+1 -> n)
     double sum = 0.;
