@@ -2,7 +2,7 @@
   \brief inverse square matrix using
   Gauss-Jordan elimination method with pivoting.
   \author SUN Yazhou, asia.rabbit@163.com
-  \date Created: 2020/05/22 Last revised: 2020/05/22 by SUN Yazhou
+  \date Created: 2020/05/26 Last revised: 2020/05/26 by SUN Yazhou
   \copyright 2020, SUN Yazhou
 */
 
@@ -32,7 +32,7 @@ int main(){
     }
     // now we have the pivotal element in row[r], then place it in row[k]
     // exchange row[k] and row[r] in augmented matrix (A|b)
-    if(r != k){ // no need for exchane if r == k
+    if(r != k){ // no need for exchange if r == k
       printf("Pivotal element in row[%d], it's %7.3f.\n", r, AE[r][k]);
       double tmp = 0.;
       for(int i = k; i < n2; i++){
@@ -48,13 +48,13 @@ int main(){
 
     // Gauss-Jordan elimination //
     // firstly, scale row[k] with 1./AE[k][k]
-    for(int i = k + 1; i <= n2; i++) AE[k][i] /= AE[k][k];
+    for(int i = k + 1; i < n2; i++) AE[k][i] /= AE[k][k];
     AE[k][k] = 1.; // not necessary, only for showcase (can be removed)
     // secondly, subtract AE[i][k]*row_k from row_i in (A|b)
     // note that i starts from 0, not k+1 (different from gaussian)
     for(int i = 0; i < n; i++){
       if(i != k){
-        for(int j = k + 1; j <= n2; j++) AE[i][j] -= AE[i][k] * AE[k][j];
+        for(int j = k + 1; j < n2; j++) AE[i][j] -= AE[i][k] * AE[k][j];
         AE[i][k] = 0.; // not necessary, only for showcase (can be removed)
       }
     } // end for over i
