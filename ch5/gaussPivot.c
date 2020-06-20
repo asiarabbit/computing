@@ -16,9 +16,9 @@ void ShowMatrix(double *A, const int nrow, const int ncol);
 int main(){
   const int n = 3; // the dimension of the coefficient matrix
   double Ab[3][4] = {
-    { 12., -3.,  3.,  15.},
-    {-18.,  3., -1., -15.},
-    {  1.,  1.,  1.,   6.}
+    { -3.,  2.,  6.,   4.},
+    { 10., -7.,  0.,   7.},
+    {  5., -1.,  5.,   6.}
   };
 
   // the elimination routine //

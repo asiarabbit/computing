@@ -10,17 +10,17 @@
 
 // the objective function
 double fun(double x){
-  return x*x*x - x - 1.;
+  return x*x - 2.*x + 1.;
 }
 // calculate the first derivative f'(x)
 double funPrime(double x){
-  return 3.*x*x - 1.;
+  return 2.*x - 2;
 }
 
 int main(){
   // the search domain of x
-  double x0 = 1.5, x1 = newton(fun, x0);
-  double epsilon = 1e-6;
+  double x0 = 1.5, x1 = x0 - fun(x0) / funPrime(x0);
+  double epsilon = 1e-5;
   // Nmax: the maximum count of iterations
   // k: the total times of iterations
   int Nmax = 100, k = 0;
@@ -30,11 +30,12 @@ int main(){
     x0 = x1;
     x1 = x0 - fun(x0) / funPrime(x0);
     k++;
-    printf("x0: %10.8f, |x1-x0|: %10.8f\n", x0, fabs(x1-x0));
+    printf("The %d-th iteration, x0: %10.8f, |x1-x0|: %10.8f", k, x0, fabs(x1-x0));
     getchar();
   } // end for over i
 
-  printf("The program has iterated %d times.\n", k);
+  printf("\n\nThis code is written by Sun Yazhou.\n");
+  printf("\nThe program has iterated %d times.\n", k);
   printf("The obtained root is %10.10f\n", x1);
   printf("Bye.\n\n");
 

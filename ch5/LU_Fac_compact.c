@@ -16,9 +16,9 @@ void ShowMatrix(double *A, const int nrow, const int ncol);
 int main(){
   const int n = 3; // the dimension of the coefficient matrix
   double Ab[3][4] = { // the augmented coefficient matrix (A|b)
-    { 2.,  1.,  5., 11.},
-    { 4.,  1., 12., 27.},
-    {-2., -4.,  5., 12.}
+    { 3.,  2.,  5.,  6.},
+    {-1.,  4.,  3.,  5.},
+    { 1., -1.,  3.,  1.}
   };
 
   // the LU factorization routine //

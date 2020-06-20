@@ -11,19 +11,19 @@
 
 // show the matrix A
 // nrow: number of rows; ncolumn: number of columns
-void ShowMatrix(const double *A, const int ncol, const int nrow = 1);
+void ShowMatrix(const double *A, const int ncol, const int nrow);
 // give the infinity norm of vector x: max|x_i|
 double maxAbs(double *x, int len);
 
 int main(){
   const int n = 3; // the dimension of the coefficient matrix
   double A[3][3] = {
-    {10., -1., -2.},
-    {-1., 10., -2.},
-    {-1., -1.,  5.}
+    { 5.,  2.,  1.},
+    {-1.,  4.,  2.},
+    { 2., -3., 10.}
   };
   double b[3] = { // the constant vector
-    72., 83., 42.
+     -12.,  20.,  3.
   };
   double x[] = {0.,0.,0.}; // x: x^((k))
   const double em = 1e-5; // error tolerance
@@ -42,16 +42,16 @@ int main(){
     } // end for over i
     e = maxAbs(ev, 3);
     printf("The solution and error vectors for the %d-th iteration:\n", k);
-    ShowMatrix(x, n);
-    ShowMatrix(ev, n);
+    ShowMatrix(x, n, 1);
+    ShowMatrix(ev, n, 1);
     printf("e=||ev||_\\infty=%.3g\n", e);
     getchar();
     k++;
   } // end while
 
   printf("\n\nThe final solution and error vectors:\n");
-  ShowMatrix(x, n);
-  ShowMatrix(ev, n);
+  ShowMatrix(x, n, 1);
+  ShowMatrix(ev, n, 1);
   return 0;
 } // end of the main function
 

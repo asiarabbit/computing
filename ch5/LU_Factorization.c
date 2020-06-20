@@ -16,12 +16,12 @@ void ShowMatrix(double *A, const int nrow, const int ncol);
 int main(){
   const int n = 3; // the dimension of the coefficient matrix
   double A[3][3] = {
-    { 2.,  1.,  5.},
-    { 4.,  1., 12.},
-    {-2., -4.,  5.}
+    { 2.,  1.,  1.},
+    { 1.,  3.,  2.},
+    { 1.,  2.,  2.}
   };
   double b[3] = { // the constant vector
-    11., 27., 12.
+     4.,  6.,  5.
   };
 
   // the LU factorization routine //
